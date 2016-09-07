@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            list-style: none;
+        }
+        .box{
+            width:1500px;
+            height:600px;
+            background: url('img/bg.jpg');
+            background-size:100%;
+            position:relative;
+        }
+        ul{
+            position:absolute;
+            bottom:0;
+        }
+        li{
+            width:200px;
+            height:200px;
+            margin:5px;
+            border:1px solid #ccc;
+            float:left;
+
+        }
+        li .back{
+            position:absolute;
+            top:0;
+            left:0
+
+            -webkit-transform:translateZ(-1px);
+        }
+        li .front{
+           -webkit-transform:translateZ(1px);
+        }
+        li:hover .back{
+            -webkit-transition:.3s all ease ;
+            -webkit-transform:translate(0,-50px) rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+<ul>
+    <li>
+        <img src="img/cd.png" class="back">
+        <img src="img/img_01.jpg" class="front">
+    </li>
+    <li>
+        <img src="img/cd.png" class="back">
+        <img src="img/img_01.jpg" class="front">
+    </li>
+    <li>
+        <img src="img/cd.png" class="back">
+        <img src="img/img_01.jpg" class="front">
+    </li>
+    <li>
+        <img src="img/cd.png" class="back">
+        <img src="img/img_01.jpg" class="front">
+    </li>
+    <li>
+        <img src="img/cd.png" class="back">
+        <img src="img/img_01.jpg" class="front">
+    </li>
+</ul>
+</div>
+</body>
+</html>

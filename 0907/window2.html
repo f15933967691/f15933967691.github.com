@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            list-style: none;
+        }
+        .box{
+           margin:100px auto;
+            width:440px;
+            height:40px;
+        }
+        .box li{
+            position:relative;
+            float:left;
+            width:100px;
+            height:80px;
+            overflow: hidden;
+            margin:0 5px;
+            border-radius: 20px;
+            box-shadow:inset 4px 4px 10px #fff;
+        }
+        .box img{
+            width:100px;
+            height:80px;
+        }
+       li div{
+            width:100px;
+            height:80px;
+            position:absolute;
+            top:0;
+            left:0;
+            line-height: 80px;
+            text-align: center;
+            font-size: 30px;
+            color:#fff;
+            background: #c1c1c1;
+            -webkit-transition:1s all ease ;
+        }
+        div:hover{
+            top:-80px;
+        }
+    </style>
+</head>
+<body>
+<ul class="box">
+    <li><img src="img/car1.jpg"><div>图一</div></li>
+    <li><img src="img/car2.jpg"><div>图二</div></li>
+    <li><img src="img/car3.jpg"><div>图三</div></li>
+    <li><img src="img/car4.jpg"><div>图四</div></li>
+</ul>
+</body>
+</html>

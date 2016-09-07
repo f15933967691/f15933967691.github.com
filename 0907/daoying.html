@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        body{
+            background: #000;
+        }
+        .box{
+            width:500px;
+            height:800px;
+            margin:10px auto;
+            position:relative;
+        }
+        img{
+            width:500px;
+            height:334px;
+            background-size:100%;
+
+        }
+        span{
+            width:500px;
+            height:334px;
+            background-size:100%;
+            background:url("img/car1.jpg");
+            position:absolute;
+            left:0;
+            top:334px;
+            -webkit-transform: scale(1,-1);
+            -webkit-mask:-webkit-linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5));
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <img src="img/car1.jpg">
+    <span></span>
+</div>
+</body>
+</html>

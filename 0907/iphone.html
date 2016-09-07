@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            background: #000;
+        }
+        .text{
+            width:600px;
+            height:100px;
+            margin:100px auto;
+            line-height: 100px;
+            text-align: center;
+            color:rgba(255,255,255,0.3);
+            font-size: 80px;
+            background:
+            -webkit-linear-gradient(-30deg,rgba(255,255,255,0)100px,rgba(255,255,255,1) 180px,rgba(255,255,255,1) 240px,rgba(255,255,255,0) 300px)-300px 0 no-repeat;
+            -webkit-background-clip:text;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oDiv=document.getElementById('text');
+            var m=-600;
+            setInterval(function(){
+                m+=10;
+                if(m==600){
+                   m=-600;
+                }
+                oDiv.style.backgroundPosition=m+"px 0px";
+            },20)
+        }
+    </script>
+</head>
+<body>
+<div class="text">滑动解锁屏幕</div>
+</body>
+</html>
