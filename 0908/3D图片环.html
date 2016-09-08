@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            list-style: none;
+        }
+        body{
+            background: #000;
+        }
+        ul{
+            width:133px;
+            height:200px;
+            margin:100px auto;
+            position:relative;
+            -webkit-transform-style: preserve-3d;
+            -webkit-transform: perspective(800px) rotateY(0deg) rotateX(0deg) ;
+            -webkit-transition: 8s all ease;
+        }
+        ul li{
+            width:100%;
+            height:100%;
+            position:absolute;
+            left:0;
+            top:0;
+            box-shadow: 0 0 20px #fff;
+            overflow:hidden;
+            border-radius: 20px;
+            -webkit-transform: rotateY(0deg) translateZ(0);
+        }
+        ul:active{
+            -webkit-transform: perspective(800px) rotateY(360deg) rotateX(0deg);
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var aLi=document.querySelectorAll('ul li');
+            for(var i=0;i<aLi.length;i++){
+               aLi[i].style.WebkitTransition='1s all ease '+(11-i)*100+'ms';
+                aLi[i].style.WebkitTransform='rotateY('+360/11*i+'deg) translateZ(300px)';
+            }
+        };
+    </script>
+</head>
+<body>
+<ul>
+    <li><img src="img/1.jpg"></li>
+    <li><img src="img/2.jpg"></li>
+    <li><img src="img/3.jpg"></li>
+    <li><img src="img/4.jpg"></li>
+    <li><img src="img/5.jpg"></li>
+    <li><img src="img/6.jpg"></li>
+    <li><img src="img/7.jpg"></li>
+    <li><img src="img/8.jpg"></li>
+    <li><img src="img/9.jpg"></li>
+    <li><img src="img/10.jpg"></li>
+    <li><img src="img/11.jpg"></li>
+
+</ul>
+</body>
+</html>
