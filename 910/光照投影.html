@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .sun{
+            width:150px;
+            height:150px;
+            background:#FC3;
+            border-radius: 50%;
+            box-shadow: 0 0 50px #FF0;
+            position:absolute;
+            left:0;
+            top:0;
+        }
+        .text{
+            height:300px;
+            font-size: 30px;
+            text-align:center;
+            text-shadow:0 0 0 #000;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oSun=document.querySelector('.sun');
+            var oT=document.querySelector('.text');
+            document.onmousemove=function(ev){
+                oSun.style.left=ev.pageX-oSun.offsetWidth/2+'px';
+                oSun.style.top = ev.pageY-oSun.offsetHeight/2+'px';
+                var x = oT.offsetLeft+oT.offsetWidth/2-ev.pageX;
+                var y = oT.offsetTop+oT.offsetHeight/2-ev.pageY;
+                var dis = Math.sqrt(x*x+y*y);
+                oT.style.textShadow = x/3+'px '+y/3+'px '+dis/10+'px #000';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="sun"></div>
+    <p class="text">这两年在郑州流行起来的“豆捞”，源于澳门，
+        由于澳门地处东海暖流区，海产品丰富，久而形成了豆捞火锅的这种独特吃法。
+        我是个“火锅发烧友”，尤其是冬天这么适合吃火锅的季节，
+        这家在大卫城刚开业没多久的豆捞坊，是来自魔都的大牌，看起来很讲究，
+        趁着开业打折，就拽着同事一起杀了过去。橘色和暗红色是这家装修的主要色调，
+        有点美式复古风格。这家豆捞是以新鲜的牛肉和纯手打的牛肉丸子清汤锅作为招牌，
+        清冽的汤底是牛骨熬出来的，加上纯手打的潮汕牛肉丸，一口下去牛肉紧致的口感就让我心里乐开了花。
+        最值得一提的是这家的牛肉，自己就有一个养牛场，现杀的牛肉以最快的速度送来，
+        到店之后店员手切成片，再装盘上桌，每一片牛肉的新鲜你都看得到。</p>
+</body>
+</html>
